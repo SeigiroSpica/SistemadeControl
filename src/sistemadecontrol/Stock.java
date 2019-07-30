@@ -23,4 +23,15 @@ public class Stock {
     }
     
     
+    public ArrayList<ItemStock> consultarItemsFaltante(int cantidadMaxima){
+            ArrayList<ItemStock> aux= new ArrayList<>();
+            
+            for(int i=0;i<items.size();i++){
+                if(items.get(i).getCantidad()<cantidadMaxima)
+                aux.add(items.get(i));
+            }
+            
+            return aux;
+    }
+    
 }
